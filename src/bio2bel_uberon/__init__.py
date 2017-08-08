@@ -2,7 +2,7 @@
 
 __version__ = '0.1.1-dev'
 
-__title__ = 'bio2bel_hp'
+__title__ = 'bio2bel_uberon'
 __description__ = "A package for converting UBERON to BEL Namespace"
 __url__ = 'https://github.com/bio2bel/uberon'
 
