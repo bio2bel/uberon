@@ -13,7 +13,6 @@ from .run import MODULE_FUNCTIONS, MODULE_DOMAIN, MODULE_NAME
 
 
 @click.group()
-@click.option('-b', '--ols-base', help="OLS base url. Defaults to {}".format(OLS_BASE))
 def main():
     """Uber Anatomy Ontology to BEL"""
     logging.basicConfig(level=10, format="%(asctime)s - %(levelname)s - %(message)s")
