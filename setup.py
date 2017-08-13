@@ -14,6 +14,9 @@ INSTALL_REQUIRES = [
     'click',
 ]
 ENTRY_POINTS = {
+    'bio2bel': [
+        'uberon = bio2bel_uberon',
+    ],
     'console_scripts': [
         'bio2bel_uberon = bio2bel_uberon.cli:main',
     ]
