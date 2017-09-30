@@ -3,12 +3,11 @@
 from __future__ import print_function
 
 import logging
+import sys
 
 import click
-import sys
-from ols_client import OLS_BASE
-from pybel_tools.ols_utils import OlsNamespaceOntology
 
+from pybel_tools.ols_utils import OlsNamespaceOntology
 from .run import MODULE_FUNCTIONS, MODULE_DOMAIN, MODULE_NAME
 
 
@@ -19,7 +18,7 @@ def main():
 
 
 @main.command()
-@click.option('-b', '--ols-base', help="OLS base url. Defaults to {}".format(OLS_BASE))
+@click.option('-b', '--ols-base', help="Custom OLS base url")
 @click.option('-o', '--output', type=click.File('w'), default=sys.stdout)
 def write(ols_base, output):
     """Writes BEL namespace"""
@@ -28,7 +27,7 @@ def write(ols_base, output):
 
 
 @main.command()
-@click.option('-b', '--ols-base', help="OLS base url. Defaults to {}".format(OLS_BASE))
+@click.option('-b', '--ols-base', help="Custom OLS base url")
 @click.option('--no-hash-check', is_flag=True)
 def deploy(ols_base=None, no_hash_check=False):
     """Deploy to Artifactory"""
