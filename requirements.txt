@@ -1,3 +1,2 @@
-ols_client
-pybel_tools
+pybel_tools==0.4.3
 click

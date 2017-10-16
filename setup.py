@@ -9,8 +9,7 @@ import setuptools
 PACKAGES = setuptools.find_packages(where='src')
 META_PATH = os.path.join('src', 'bio2bel_uberon', '__init__.py')
 INSTALL_REQUIRES = [
-    'pybel_tools',
-    'ols_client',
+    'pybel_tools==0.4.3',
     'click',
 ]
 ENTRY_POINTS = {
